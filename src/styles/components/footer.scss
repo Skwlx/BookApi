@@ -1,0 +1,15 @@
+.footer{
+    text-align: center;
+    background-color: darken(#633c34, 10%);
+    color: white;
+    margin: 0;
+    padding: 15px;
+    a{
+        color: white;
+        text-decoration: none;
+        transition: .1s ease-in;
+        &:hover{
+            color: black;
+        }
+    }
+}
