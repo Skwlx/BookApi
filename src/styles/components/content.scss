@@ -4,6 +4,7 @@
     min-height: 90vh;
     font-family: serif;
     padding: 40px 0;
+    overflow-x: hidden;
 }
 
 .contentFormBox{
@@ -84,7 +85,7 @@ img{
 }
 
 .contentBookDescriptionInfo{
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     padding: 10px;
 }
 
@@ -140,5 +141,19 @@ img{
     .contentContainer{
         flex-direction: column;
         align-items: center;
+    }
+    .contentBookCover{
+        transform: translateX(-200px);
+    }
+    .contentBook{
+        transform: translateX(100px);
+    }
+    .contentBook, .contentBookCover{
+        width: 180px;
+        height: 280px;
+        
+    }
+    .contentBook:hover .contentBookCover{
+        transform: none;
     }
 }

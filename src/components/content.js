@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 import "../styles/components/content.scss";
-import background from "../images/Background.jpg"
 
 const Content = () => {
     const [books, setBooks] = useState([]);
