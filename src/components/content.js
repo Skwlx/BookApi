@@ -1,30 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 import "../styles/components/content.scss";
 import background from "../images/Background.jpg"
 
 const Content = () => {
-    const [books, setBooks] = useState({});
-
-    const search = (value) => {
-        if(value === "" || books === undefined){
-            return 0;
-        }
-        return(
-            fetch(`https://www.googleapis.com/books/v1/volumes?q=${value}`)
-            .then(response => response.json())
-            .then(result => {
-            setBooks(result.items)
-            })
-        )
-    }
-
-    const showBook = (e) => {
-        if(window.innerWidth <= 768){
-            const book = e.target;
-            book.classList.toggle("show");
-        }
-    }
+    const [books, setBooks] = useState([]);
+    const [query, setQuery] = useState("Harry Potter");
+    useEffect(() => {
+        const fetchData = async () => {
+            const result = await axios(
+                `https://www.googleapis.com/books/v1/volumes?q=${query}`,
+            );
+       
+            setBooks(result.data.items);
+          };
+        fetchData();
+    }, [query]);
 
     return(
         <div className="content">
@@ -32,11 +24,11 @@ const Content = () => {
             <input type="text" name="searchedValue"></input>
             <button onClick={(e) => {
                 e.preventDefault();
-                search(document.querySelector("input").value)}
+                setQuery(document.querySelector("input").value)}
             }>Search</button>
           </div>
             <div className="contentContainer">
-            {books[0] === undefined ? <p className="contentContainerInfo">No books here</p> : books.map(book =>{
+            {books.map(book =>{
                 return(
                     <div className="contentBook" key={book.id}>
                         <div className="contentBookDescription">
@@ -54,7 +46,6 @@ const Content = () => {
                             src={book.volumeInfo.imageLinks === undefined ? "" :`${book.volumeInfo.imageLinks.thumbnail}`}     
                             className="contentBookFront"
                             alt="There is no front site of the book"
-                            onClick={(e) =>{ showBook(e)}}
                             />
                             <img 
                             src={book.volumeInfo.imageLinks === undefined ? "" : `${book.volumeInfo.imageLinks.thumbnail}`}
