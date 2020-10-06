@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/BookApi/static/css/main.bad108c5.chunk.css",
+    "main.css": "/BookApi/static/css/main.611b471b.chunk.css",
     "main.js": "/BookApi/static/js/main.23806840.chunk.js",
     "main.js.map": "/BookApi/static/js/main.23806840.chunk.js.map",
     "runtime-main.js": "/BookApi/static/js/runtime-main.c79242cb.js",
@@ -8,16 +8,16 @@
     "static/js/2.8a594739.chunk.js": "/BookApi/static/js/2.8a594739.chunk.js",
     "static/js/2.8a594739.chunk.js.map": "/BookApi/static/js/2.8a594739.chunk.js.map",
     "index.html": "/BookApi/index.html",
-    "precache-manifest.58ba5d2c3d7abf69e323c976e31b4ae4.js": "/BookApi/precache-manifest.58ba5d2c3d7abf69e323c976e31b4ae4.js",
+    "precache-manifest.c8934bfe09a58b5f9f6b34d8ca0423f8.js": "/BookApi/precache-manifest.c8934bfe09a58b5f9f6b34d8ca0423f8.js",
     "service-worker.js": "/BookApi/service-worker.js",
-    "static/css/main.bad108c5.chunk.css.map": "/BookApi/static/css/main.bad108c5.chunk.css.map",
+    "static/css/main.611b471b.chunk.css.map": "/BookApi/static/css/main.611b471b.chunk.css.map",
     "static/js/2.8a594739.chunk.js.LICENSE.txt": "/BookApi/static/js/2.8a594739.chunk.js.LICENSE.txt",
     "static/media/content.scss": "/BookApi/static/media/Background.e4f2fd23.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.c79242cb.js",
     "static/js/2.8a594739.chunk.js",
-    "static/css/main.bad108c5.chunk.css",
+    "static/css/main.611b471b.chunk.css",
     "static/js/main.23806840.chunk.js"
   ]
 }
